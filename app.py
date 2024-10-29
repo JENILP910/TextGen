@@ -127,7 +127,7 @@ btn = st.button("Generate")
 if btn:
     st.subheader("Seed Text")
     type_text(inp)
-    model.load_state_dict(torch.load("Model_emb"+str(emb_dim)+"_block_size_"+str(block_size)+".pth", map_location = device, weights_only=True))
+    model.load_state_dict(torch.load("Model_emb"+str(emb_dim)+"_block_size_"+str(block_size)+"_"+actFunc+".pth", map_location = device, weights_only=True))
     # model.load_state_dict(torch.load("gt_eng_model_upper_two_hid_layer_emb"+str(emb_dim)+"_block_size_"+str(block_size)+".pth", map_location = device))
     gen_txt = generate_text(model, inp, itos, stoi, block_size, no_of_chars)
     st.subheader("Generated Text")
