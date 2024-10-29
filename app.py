@@ -16,7 +16,7 @@ st.sidebar.write("Made using a simple 2 hidden layered Neural Network, this text
 
 st.sidebar.write("Here, the intension is not to generate meaningful sentences, we require a lot of compute for that. This app aims at showing how a vanilla neural network is also capable of capturing the format of English language, and generate words that are (very close to) valid words. Notice that the model uses capital letters (including capital I), punctuation marks and fullstops nearly correct. The text is generated paragraph wise, because the model learnt this from the text corpus.")
 
-st.sidebar.write("This model was trained on a simple 600 KB text corpus titled: 'Shakespeare'")
+st.sidebar.write("This model was trained on a simple 4.52 MB text corpus titled: 'Shakespeare'")
 
 no_of_chars = st.slider("Number of characters to be generated", 100, 2000, 1000)
 
