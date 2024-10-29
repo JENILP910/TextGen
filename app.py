@@ -118,7 +118,7 @@ model = torch.compile(model)
 # Activation Function
 actFunc = st.selectbox(
   'Select Activation Function',
-  ("sin", "tanh", "relu"), index=0)
+  ("sin", "relu", "tanh"), index=0)
 
 inp = st.text_input("Enter text", placeholder="Enter valid English text.")
 
