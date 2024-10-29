@@ -101,10 +101,10 @@ class NextChar(nn.Module):
   
 # Embedding layer for the context
 
-# emb_dim = 10
+# emb_dim = 15
 emb_dim = st.selectbox(
   'Select embedding size',
-  (1,2,5,10,15,30,50,100), index=4)
+  (15,32, 64), index=1)
 emb = torch.nn.Embedding(len(stoi), emb_dim)
 
 # block_size = 15
@@ -114,6 +114,11 @@ block_size = st.selectbox(
 emb = torch.nn.Embedding(len(stoi), emb_dim)
 model = NextChar(block_size, len(stoi), emb_dim, 500, 300).to(device)
 model = torch.compile(model)
+
+# Activation Function
+actFunc = st.selectbox(
+  'Select block size',
+  ("sin", "tanh", "relu"), index=0)
 
 inp = st.text_input("Enter text", placeholder="Enter valid English text.")
 
